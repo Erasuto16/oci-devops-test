@@ -7,12 +7,12 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     html = ('<h2 style="font-family: Consolas, monaco, monospace">' +
-            '    Hello from Flask, {name}! (Python)' +
+            '    Hello from TEST, {name}! (Python)' +
             '</h2>' +
             '<h3 style="font-family: Consolas, monaco, monospace">' +
             '    Hostname:' +
             '</h3>' +
-            '<h3 style="font-family: Consolas, monaco, monospace">' +
+            '<h3 style="font-family: Consolas, monaco, monospace; color: red;">' +
             '    {hostname}' +
             '</h3>')
     return html.format(name=os.getenv("NAME", "World"), hostname=socket.gethostname())
